@@ -129,7 +129,7 @@ create_wrap_start_l <- function(data) {
 
   heading <- dt_heading_get(data = data)
 
-  title_row <- latex_group("\\large ", heading$title, footnote_title_marks)
+  title_row <- latex_group("\\large ", heading$title)
 
   if (subtitle_defined) {
 
