@@ -406,17 +406,18 @@ create_heading_component_l <- function(data) {
 
     label_row <-
       paste0(
-        " \\\\ \n",
-        latex_group("\\small ", heading$label)
+       "\\label", latex_group("tab", heading$label)
       )
 
   } else {
     label_row <- ""
   }
   
+  paste0(
   paste_between(
     paste0(title_row, subtitle_row, label_row),
     x_2 = c("\\caption{\n", "\n} \n")
+  ), label_row
   )
 }
 
