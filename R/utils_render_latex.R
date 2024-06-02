@@ -130,7 +130,7 @@ create_wrap_start_l <- function(data) {
 
   ifelse(dt_options_get_value(data = data, option = "latex_use_longtable"),
          "\\begingroup\n",
-         paste0("\\begin{table}", tbl_pos, "\n"))
+         paste0("\\begin{table}", tbl_pos, "\n", title_row))
 }
 
 #' @noRd
