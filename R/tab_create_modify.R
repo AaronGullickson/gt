@@ -210,7 +210,7 @@ tab_header <- function(
     title = title,
     subtitle = subtitle,
     preheader = preheader,
-    label = NULL
+    label = label
   )
 }
 
