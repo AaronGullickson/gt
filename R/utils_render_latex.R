@@ -121,6 +121,33 @@ latex_group_row <- function(
 
 #' @noRd
 create_wrap_start_l <- function(data) {
+
+# If there is no title or heading component, then return an empty string
+  if (!dt_heading_has_title(data = data)) {
+    return("")
+  }
+
+  heading <- dt_heading_get(data = data)
+
+  title_row <- latex_group("\\large ", heading$title, footnote_title_marks)
+
+  if (subtitle_defined) {
+
+    subtitle_row <-
+      paste0(
+        " \n",
+        latex_group("\\small ", heading$subtitle, footnote_subtitle_marks)
+      )
+
+  } else {
+    subtitle_row <- ""
+  }
+
+  paste_between(
+    paste0(title_row, subtitle_row),
+    x_2 = c("\\caption{\n", "\n} \n")
+  )
+  
   tbl_pos = ifelse(check_quarto(),
                    "",
                    paste0("[",
@@ -130,7 +157,7 @@ create_wrap_start_l <- function(data) {
 
   ifelse(dt_options_get_value(data = data, option = "latex_use_longtable"),
          "\\begingroup\n",
-         paste0("\\begin{table caption caption test}", tbl_pos, "\\caption{this is a caption}"))
+         paste0("\\begin{table caption caption test}", tbl_pos, title_row, subtitle_row))
 }
 
 #' @noRd
