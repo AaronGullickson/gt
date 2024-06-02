@@ -130,7 +130,7 @@ create_wrap_start_l <- function(data) {
 
   ifelse(dt_options_get_value(data = data, option = "latex_use_longtable"),
          "\\begingroup\n",
-         paste0("\\begin{table}", tbl_pos, "\n", title_row))
+         paste0("\\begin{table}", tbl_pos, "\n", "caption{this is a caption}"))
 }
 
 #' @noRd
@@ -324,7 +324,7 @@ create_table_start_l <- function(data) {
     ifelse(dt_options_get_value(data = data, option = "latex_use_longtable"),
            "\\begin{longtable}{",
            "\n",
-           title_row,
+           "caption{this is a caption}",
            "\n",
            hdr_tabular),
     extra_sep,
