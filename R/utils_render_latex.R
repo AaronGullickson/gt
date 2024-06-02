@@ -136,7 +136,7 @@ create_wrap_start_l <- function(data) {
     subtitle_row <-
       paste0(
         " \n",
-        latex_group("\\small ", heading$subtitle, footnote_subtitle_marks)
+        latex_group("\\small ", heading$subtitle)
       )
 
   } else {
