@@ -197,7 +197,7 @@ create_wrap_start_l <- function(data) {
 
   ifelse(dt_options_get_value(data = data, option = "latex_use_longtable"),
          "\\begingroup\n",
-         paste0("\\begin{table caption caption test}", tbl_pos, title_row, subtitle_row))
+         paste0("\\begin{table}", tbl_pos, paste_between(title_row, subtitle_row))
 }
 
 #' @noRd
