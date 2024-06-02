@@ -89,6 +89,6 @@ dt_heading_has_label <- function(data) {
 
   heading <- dt_heading_get(data = data)
 
-  length(heading$label) > 0 && is_nonempty_string(heading$label)
+  length(heading$label) > 0
 }
                     
