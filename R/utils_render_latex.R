@@ -348,6 +348,7 @@ create_heading_component_l <- function(data) {
   heading <- dt_heading_get(data = data)
   footnotes_tbl <- dt_footnotes_get(data = data)
   subtitle_defined <- dt_heading_has_subtitle(data = data)
+  label_defined <- dt_heading_has_label(data = data)
 
   # Get the footnote marks for the title
   if ("title" %in% footnotes_tbl$locname) {
@@ -401,9 +402,26 @@ create_heading_component_l <- function(data) {
     subtitle_row <- ""
   }
 
+  if (label_defined) {
+
+    label_row <-
+      paste0(
+        " \\\\ \n",
+        latex_group("\\label ", heading$label)
+      )
+
+  } else {
+    label_row <- ""
+  }
+  
   paste_between(
     paste0(title_row, subtitle_row),
     x_2 = c("\\caption{\n", "\n} \n")
+  )
+
+    paste_between(
+    paste0(label_row),
+    x = c("\\label{tab-", "} \n")
   )
 }
 
