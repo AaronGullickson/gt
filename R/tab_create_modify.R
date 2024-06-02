@@ -50,6 +50,14 @@
 #'   [html()] helper functions to style the text as Markdown or to retain HTML
 #'   elements in the text.
 #'
+#' @param label *Header label*
+#'
+#'   `scalar<character>` // *default:* `NULL` (`optional`)
+#'
+#'   Text to be used in the table label. We can elect to use the [md()] and
+#'   [html()] helper functions to style the text as Markdown or to retain HTML
+#'   elements in the text.
+#'
 #' @param preheader *RTF preheader text*
 #'
 #'   `vector<character>` // *default:* `NULL` (`optional`)
