@@ -406,6 +406,7 @@ create_heading_component_l <- function(data) {
 
     label_row <-
       paste0(
+        " \\\\ \n",
         latex_group("\\label{tab-", heading$label, "}")
       )
 
