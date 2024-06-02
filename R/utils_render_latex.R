@@ -120,7 +120,7 @@ latex_group_row <- function(
 }
 
 #' @noRd
-create_wrap_start_l <- function(data) {
+create_heading_component_l <- function(data) {
 
   # If there is no title or heading component, then return an empty string
   if (!dt_heading_has_title(data = data)) {
