@@ -393,14 +393,6 @@ create_table_start_l <- function(data) {
   )
 }
 
-#' Create the heading component of a table
-#'
-#' The table heading component contains the title and possibly a subtitle; if
-#' there are no heading components defined this function will return an empty
-#' string.
-#'
-#' @noRd
-
 #' Create the columns component of a table
 #'
 #' @noRd
