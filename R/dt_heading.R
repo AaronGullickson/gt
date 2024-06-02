@@ -38,18 +38,19 @@ dt_heading_init <- function(data) {
     list(
       title = NULL,
       subtitle = NULL,
-      preheader = NULL
+      preheader = NULL,
+      label = NULL
     )
 
   dt_heading_set(data = data, heading = heading)
 }
 
-dt_set_heading_components <- function(data, title, subtitle, preheader) {
+dt_set_heading_components <- function(data, title, subtitle, preheader, label) {
 
   heading <- dt_heading_get(data = data)
 
-  heading[c("title", "subtitle", "preheader")] <-
-    list(title = title, subtitle = subtitle, preheader = preheader)
+  heading[c("title", "subtitle", "preheader", "label")] <-
+    list(title = title, subtitle = subtitle, preheader = preheader, label = label)
 
   dt_heading_set(data = data, heading = heading)
 }
@@ -83,3 +84,11 @@ dt_heading_has_preheader <- function(data) {
 
   length(heading$preheader) > 0
 }
+
+dt_heading_has_label <- function(data) {
+
+  heading <- dt_heading_get(data = data)
+
+  length(heading$label) > 0
+}
+                    
