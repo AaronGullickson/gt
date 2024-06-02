@@ -417,8 +417,8 @@ create_heading_component_l <- function(data) {
   paste_between(
     paste0(title_row, subtitle_row),
     ifelse(label_defined,
-      c("\\caption{\n", "\n}"),
-      c("\\caption*{\n", "\n}")
+      "c("\\caption{\n", "\n}")",
+      "c("\\caption*{\n", "\n}")"
     )
   ),
     label_row,
