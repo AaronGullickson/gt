@@ -406,8 +406,7 @@ create_heading_component_l <- function(data) {
 
     label_row <-
       paste0(
-        " \\\\ \n",
-        latex_group("\\label ", heading$label)
+        latex_group("\\label{tab-", heading$label, "}")
       )
 
   } else {
@@ -417,11 +416,6 @@ create_heading_component_l <- function(data) {
   paste_between(
     paste0(title_row, subtitle_row),
     x_2 = c("\\caption{\n", "\n} \n")
-  )
-
-    paste_between(
-    paste0(label_row),
-    x = c("\\label{tab-", "} \n")
   )
 }
 
