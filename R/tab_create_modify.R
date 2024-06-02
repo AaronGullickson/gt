@@ -198,7 +198,8 @@ tab_header <- function(
     data,
     title,
     subtitle = NULL,
-    preheader = NULL
+    preheader = NULL,
+    label = NULL
 ) {
 
   # Perform input object validation
@@ -208,7 +209,8 @@ tab_header <- function(
     data = data,
     title = title,
     subtitle = subtitle,
-    preheader = preheader
+    preheader = preheader,
+    label = NULL
   )
 }
 
