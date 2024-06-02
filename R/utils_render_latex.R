@@ -393,7 +393,7 @@ create_heading_component_l <- function(data) {
 
     subtitle_row <-
       paste0(
-        " \\\\ \n",
+        " \n",
         latex_group("\\small ", heading$subtitle, footnote_subtitle_marks)
       )
 
