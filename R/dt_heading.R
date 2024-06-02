@@ -45,7 +45,7 @@ dt_heading_init <- function(data) {
   dt_heading_set(data = data, heading = heading)
 }
 
-dt_set_heading_components <- function(data, title, subtitle, preheader, label) {
+dt_set_heading_components <- function(data, title, subtitle, label, preheader) {
 
   heading <- dt_heading_get(data = data)
 
