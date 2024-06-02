@@ -725,10 +725,10 @@ as_latex <- function(data) {
   knitr::asis_output(
     paste0(
       wrap_start_statement,
-      heading_component,
       table_width_statement,
       fontsize_statement,
       table_start,
+      heading_component,
       columns_component,
       body_component,
       table_end,
@@ -742,10 +742,10 @@ as_latex <- function(data) {
    knitr::asis_output(
     paste0(
       wrap_start_statement,
+      heading_component,
       table_width_statement,
       fontsize_statement,
       table_start,
-      heading_component,
       columns_component,
       body_component,
       table_end,
